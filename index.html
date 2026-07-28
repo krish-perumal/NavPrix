@@ -4,42 +4,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAVPRIX — Innovate · Intelligence · Impact</title>
+  <title>NAVPRIX Global — Engineering Intelligence. Creating Global Impact.</title>
   <meta name="description"
-    content="NAVPRIX is a multidisciplinary studio building software, launching products, advising ambitious teams, and producing original media.">
-  <meta property="og:title" content="NAVPRIX — Innovate · Intelligence · Impact">
-  <meta property="og:description" content="Software Development, Products, Consulting & Media — under one roof.">
+    content="NAVPRIX Global is an artificial intelligence, research, and innovation company — building AI products, conducting applied research, and engineering technology that solves real-world problems.">
+  <meta property="og:title" content="NAVPRIX Global — Engineering Intelligence. Creating Global Impact.">
+  <meta property="og:description"
+    content="AI Solutions · Research Labs · Software Products · Technology Consulting · Publications · Education — under one mission.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/og-image.jpg">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NAVPRIX Global — Engineering Intelligence. Creating Global Impact.">
+  <meta name="twitter:description"
+    content="AI Solutions · Research Labs · Software Products · Technology Consulting · Publications · Education — under one mission.">
+  <meta name="twitter:image" content="assets/og-image.jpg">
+  <meta name="theme-color" content="#050810">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NAVPRIX Global",
+    "alternateName": "NAVPRIX LLC",
+    "description": "NAVPRIX Global is an artificial intelligence, research, and innovation company building AI products, conducting applied research, and engineering technology that solves real-world problems.",
+    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Research", "Software Products", "Technology Consulting", "Publishing", "Media", "Education"]
+  }
+  </script>
 </head>
 
 <body>
 
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <div class="bg-grid" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#top" class="brand">
-        <!-- <img src="assets/logo-mark.png" alt="" class="brand__mark"> -->
         <img src="assets/logo-wordmark-new.png" alt="NAVPRIX" class="brand__word-img">
       </a>
       <nav class="nav-links" id="navLinks">
-        <a href="#services" data-nav>Services</a>
+        <a href="#solutions" data-nav>Solutions</a>
         <a href="#products" data-nav>Products</a>
+        <a href="#research" data-nav>Research</a>
         <a href="#media" data-nav>Media</a>
-        <a href="#about" data-nav>About</a>
+        <a href="#about" data-nav>Company</a>
         <a href="#contact" data-nav>Contact</a>
-        <a href="#contact" class="btn btn--primary btn--sm nav-cta-mobile">Start a Project</a>
+        <a href="#contact" class="btn btn--primary btn--sm nav-cta-mobile">Partner With Us</a>
       </nav>
-      <a href="#contact" class="btn btn--primary btn--sm nav-cta">Start a Project</a>
+      <a href="#contact" class="btn btn--primary btn--sm nav-cta">Partner With Us</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -48,69 +71,194 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="container hero__inner">
-      <p class="eyebrow reveal">INNOVATE <span class="dot">·</span> INTELLIGENCE <span class="dot">·</span> IMPACT</p>
-      <h1 class="hero__title reveal">Engineering the Future,<br>One Idea at a Time</h1>
-      <p class="hero__subtitle reveal">NAVPRIX builds software, ships products, advises ambitious teams, and tells
-        stories worth watching.</p>
-      <div class="hero__cta reveal">
-        <a href="#work" class="btn btn--primary">Explore Our Work</a>
-        <a href="#contact" class="btn btn--ghost">Talk to Us</a>
+      <div class="hero__content">
+        <p class="eyebrow reveal">INNOVATE <span class="dot">·</span> INTELLIGENCE <span class="dot">·</span> IMPACT</p>
+        <h1 class="hero__title reveal">Engineering Intelligence.<br>Creating Global Impact.</h1>
+        <p class="hero__subtitle reveal">NAVPRIX develops AI-powered products, enterprise software, scientific
+          research, educational technologies, media platforms, and intelligent solutions that create measurable
+          impact worldwide.</p>
+        <div class="hero__cta reveal">
+          <a href="#solutions" class="btn btn--primary">
+            Explore Solutions
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a href="#research" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3h6M10 3v6.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V3" />
+            </svg>
+            Our Research
+          </a>
+        </div>
+        <p class="hero__trust reveal">Trusted by innovators worldwide <span class="mock-tag">MOCK</span></p>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <canvas class="hero__globe" id="heroGlobe"></canvas>
+        <div class="hero__badge hero__badge--1">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div><strong>AI Solutions</strong><span>Intelligent Systems</span></div>
+        </div>
+        <div class="hero__badge hero__badge--2">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9s1.3-6.5 3.8-9Z" />
+            </svg>
+          </div>
+          <div><strong>Global Impact</strong><span>Worldwide Reach</span></div>
+        </div>
+        <div class="hero__badge hero__badge--3">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M9 3h6M10 3v6.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div><strong>Research Driven</strong><span>Scientific Excellence</span></div>
+        </div>
+        <div class="hero__badge hero__badge--4">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path
+                d="M12 2c3 2 5 5.5 5 9.5 0 2-.5 3.7-1.3 5.2L18 20l-3-1-1 3-1.7-3.3A9.6 9.6 0 0 1 12 19a9.6 9.6 0 0 1-.3-.1L10 22l-1-3-3 1 2.3-3.3A11 11 0 0 1 7 11.5C7 7.5 9 4 12 2Z"
+                stroke-linejoin="round" />
+              <circle cx="12" cy="10" r="1.6" />
+            </svg>
+          </div>
+          <div><strong>Future Ready</strong><span>Innovation Focused</span></div>
+        </div>
       </div>
     </div>
     <div class="scroll-indicator" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- WHAT WE DO -->
-  <section class="section section--alt" id="services">
+  <!-- TRUST BAR -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__item"><strong>Artificial Intelligence</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Research</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Cloud</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Software</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Healthcare</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Education</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Agriculture</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Publishing</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Media</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Innovation</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Artificial Intelligence</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Research</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Cloud</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Software</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Healthcare</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Education</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Agriculture</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Publishing</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Media</strong><span class="sep">✦</span></div>
+      <div class="marquee__item"><strong>Innovation</strong><span class="sep">✦</span></div>
+    </div>
+  </div>
+
+  <!-- SOLUTIONS (WHAT WE DO) -->
+  <section class="section section--alt" id="solutions">
     <div class="container">
       <p class="section-eyebrow reveal">What We Do</p>
-      <h2 class="section-title reveal">Four disciplines. One team.</h2>
+      <h2 class="section-title reveal">Six divisions. One mission.</h2>
+      <p class="section-lead reveal">From artificial intelligence and applied research to enterprise software,
+        consulting, publishing, and education — NAVPRIX Global operates as one integrated system built to turn
+        scientific rigor into real-world impact.</p>
 
-      <div class="pillars">
-        <article class="pillar-card reveal">
+      <div class="pillars pillars--six">
+        <article class="pillar-card reveal" data-tilt>
           <div class="pillar-card__icon">
             <svg viewBox="0 0 24 24">
-              <path d="M9 18 3 12l6-6M15 6l6 6-6 6" stroke="url(#iconBlue)" stroke-width="1.8" fill="none"
-                stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="3" stroke="url(#iconBlue)" stroke-width="1.8" fill="none" />
+              <path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"
+                stroke="url(#iconBlue)" stroke-width="1.8" stroke-linecap="round" />
             </svg>
           </div>
-          <h3>Software Development</h3>
-          <p>We design and build custom web and mobile applications, robust backends, and cloud infrastructure that
-            scale with you — from first prototype to production. <span class="mock-tag">MOCK</span></p>
+          <h3>AI Solutions</h3>
+          <p>We design and deploy enterprise-grade AI systems — intelligent agents, LLM applications, generative AI,
+            and computer vision — engineered for measurable, real-world impact.</p>
+          <ul class="capability-list">
+            <li>AI Agents</li>
+            <li>LLM Solutions</li>
+            <li>Generative AI</li>
+            <li>Computer Vision</li>
+          </ul>
+          <a href="#products" class="pillar-card__cta">Explore AI Products →</a>
         </article>
 
-        <article class="pillar-card reveal" id="products">
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3h6M10 3v6.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V3" stroke="url(#iconBlue)"
+                stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Research Labs</h3>
+          <p>Our research division advances applied AI across healthcare, education, agriculture, and robotics —
+            producing publications, patents, and breakthrough prototypes.</p>
+          <ul class="capability-list">
+            <li>Applied Research</li>
+            <li>Patents</li>
+            <li>Publications</li>
+            <li>Prototypes</li>
+          </ul>
+          <a href="#research" class="pillar-card__cta">Visit Research Labs →</a>
+        </article>
+
+        <article class="pillar-card reveal" data-tilt>
           <div class="pillar-card__icon">
             <svg viewBox="0 0 24 24">
               <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 0v20M3 7l9 5 9-5" stroke="url(#iconBlue)" stroke-width="1.8"
                 fill="none" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <h3>Products</h3>
-          <p>We build and own digital products of our own, testing ideas in the real world before we bring that same
-            rigor to yours. <span class="mock-tag">MOCK</span></p>
-          <div class="product-list">
-            <div class="product-chip"><span>PulseBoard</span><em class="badge badge--live">Live</em></div>
-            <div class="product-chip"><span>RouteIQ</span><em class="badge badge--beta">Beta</em></div>
-            <div class="product-chip"><span>FormlyAI</span><em class="badge badge--soon">Coming Soon</em></div>
-          </div>
+          <h3>Software Products</h3>
+          <p>We build and scale SaaS platforms, enterprise applications, and cloud-native systems —
+            production-grade software engineered for reliability at scale.</p>
+          <ul class="capability-list">
+            <li>SaaS</li>
+            <li>Cloud Platforms</li>
+            <li>Enterprise Apps</li>
+            <li>APIs</li>
+          </ul>
+          <a href="#products" class="pillar-card__cta">View Products →</a>
         </article>
 
-        <article class="pillar-card reveal">
+        <article class="pillar-card reveal" data-tilt>
           <div class="pillar-card__icon">
             <svg viewBox="0 0 24 24">
               <path d="M4 21V9m8 12V3m8 18v-7" stroke="url(#iconBlue)" stroke-width="1.8" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <h3>Consulting</h3>
-          <p>From technology strategy to architecture reviews and fractional CTO support, we help teams make confident,
-            informed decisions about what to build next. <span class="mock-tag">MOCK</span></p>
+          <h3>Technology Consulting</h3>
+          <p>From AI strategy to cloud modernization and fractional CTO leadership, we help enterprises architect
+            their next decade of technology.</p>
+          <ul class="capability-list">
+            <li>Enterprise Architecture</li>
+            <li>Cloud Transformation</li>
+            <li>CTO Advisory</li>
+            <li>Azure Solutions</li>
+          </ul>
+          <a href="#contact" class="pillar-card__cta">Talk to an Advisor →</a>
         </article>
 
-        <article class="pillar-card reveal" id="media">
+        <article class="pillar-card reveal" data-tilt>
           <div class="pillar-card__icon">
             <svg viewBox="0 0 24 24">
               <path d="m10 8 6 4-6 4V8Z" stroke="url(#iconBlue)" stroke-width="1.8" fill="none"
@@ -118,9 +266,16 @@
               <rect x="3" y="4" width="18" height="16" rx="3" stroke="url(#iconBlue)" stroke-width="1.8" />
             </svg>
           </div>
-          <h3>Media</h3>
-          <p>Our media arm creates short films, documentaries, and a YouTube channel exploring technology, innovation,
-            and the people building what's next. <span class="mock-tag">MOCK</span></p>
+          <h3>Media &amp; Publications</h3>
+          <p>We translate complex research into documentaries, educational media, and published books — making
+            advanced science accessible to a global audience.</p>
+          <ul class="capability-list">
+            <li>Documentaries</li>
+            <li>Books</li>
+            <li>Podcasts</li>
+            <li>Digital Media</li>
+          </ul>
+          <a href="#media" class="pillar-card__cta">Explore Media Studios →</a>
 
           <div class="video-placeholder">
             <button class="video-placeholder__play" aria-label="Play featured video">
@@ -128,9 +283,30 @@
                 <path d="M8 5v14l11-7z" fill="currentColor" />
               </svg>
             </button>
-            <span class="video-placeholder__label">Featured Video — youtube.com/@navprix <span
+            <span class="video-placeholder__label">Featured Research Documentary — youtube.com/@navprix <span
                 class="mock-tag">MOCK</span></span>
           </div>
+        </article>
+
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="m12 3 10 5-10 5L2 8l10-5Z" stroke="url(#iconBlue)" stroke-width="1.8" fill="none"
+                stroke-linejoin="round" />
+              <path d="M6 10.5V16c0 1.1 2.7 3 6 3s6-1.9 6-3v-5.5" stroke="url(#iconBlue)" stroke-width="1.8"
+                fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Education</h3>
+          <p>Adaptive, AI-powered learning — from music education to exam preparation — built on the same
+            intelligence engines that power our research.</p>
+          <ul class="capability-list">
+            <li>AI Piano Teacher</li>
+            <li>NEET Teacher</li>
+            <li>Research Academy</li>
+            <li>Corporate Training</li>
+          </ul>
+          <a href="#products" class="pillar-card__cta">Explore Academy →</a>
         </article>
       </div>
 
@@ -146,164 +322,466 @@
     </div>
   </section>
 
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="container">
+      <p class="section-eyebrow reveal">Flagship Products</p>
+      <h2 class="section-title reveal">Products built on real intelligence.</h2>
+      <p class="section-lead reveal">Every NAVPRIX Global product is built on the same principle: rigorous research,
+        translated into software people actually use — across education, mobility, and agriculture.</p>
+
+      <div class="pillars pillars--six">
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 18V5l12-2v13" stroke="url(#iconBlue)" stroke-width="1.8" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="6" cy="18" r="3" stroke="url(#iconBlue)" stroke-width="1.8" fill="none" />
+              <circle cx="18" cy="16" r="3" stroke="url(#iconBlue)" stroke-width="1.8" fill="none" />
+            </svg>
+          </div>
+          <div class="pillar-card__head">
+            <h3>AI Piano Teacher</h3>
+            <em class="badge badge--live">Live</em>
+          </div>
+          <p>An adaptive AI music-education platform that listens, corrects, and personalizes every lesson in real
+            time.</p>
+        </article>
+
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z" stroke="url(#iconBlue)"
+                stroke-width="1.8" fill="none" stroke-linejoin="round" />
+              <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20" stroke="url(#iconBlue)" stroke-width="1.8" fill="none"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="pillar-card__head">
+            <h3>NEET Teacher</h3>
+            <em class="badge badge--beta">Development</em>
+          </div>
+          <p>An adaptive AI learning platform built to personalize exam preparation at scale.</p>
+        </article>
+
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 17 9 11l4 4 8-8" stroke="url(#iconBlue)" stroke-width="1.8" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M15 7h6v6" stroke="url(#iconBlue)" stroke-width="1.8" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="pillar-card__head">
+            <h3>IntelXL WealthOS</h3>
+            <em class="badge badge--beta">Beta</em>
+          </div>
+          <p>An AI-powered financial operating system that unifies personal and business finance — income, taxes,
+            investments, and net worth — into one intelligent platform.</p>
+        </article>
+
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 21c8-1 13-6 14-14-8 1-13 6-14 14Zm0 0c1-4 3-6 6-8" stroke="url(#iconBlue)"
+                stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="pillar-card__head">
+            <h3>FarmAI</h3>
+            <em class="badge badge--soon">Research</em>
+          </div>
+          <p>Organic farming intelligence — computer vision and analytics for healthier crops and soil.</p>
+        </article>
+
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3h6M10 3v6.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V3" stroke="url(#iconBlue)"
+                stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="pillar-card__head">
+            <h3>Research Studio</h3>
+            <em class="badge badge--soon">Coming Soon</em>
+          </div>
+          <p>An AI platform built for researchers — from data to publication, in one workspace.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH LABS -->
+  <section class="section section--alt" id="research">
+    <div class="container">
+      <p class="section-eyebrow reveal">Research Labs</p>
+      <h2 class="section-title reveal">NAVPRIX Research Labs</h2>
+      <p class="section-lead reveal">Our research division advances the frontier of applied artificial intelligence
+        — publishing original work, filing patents, and building explainable, safety-first AI systems across the
+        disciplines where intelligence can do the most good.</p>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Healthcare AI</h4>
+          <p>Interpretable models for diagnostics, triage, and clinical decision support.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Educational AI</h4>
+          <p>Adaptive tutoring systems that personalize how people learn.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Agriculture AI</h4>
+          <p>Computer vision and analytics for crop health and soil intelligence.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Computer Vision</h4>
+          <p>Vision systems for detection, diagnostics, and automation.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Large Language Models</h4>
+          <p>Research into reasoning, retrieval, and enterprise-grade LLM applications.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>AI Safety</h4>
+          <p>Research into alignment, robustness, and responsible deployment.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Explainable AI</h4>
+          <p>Making model decisions transparent, auditable, and trustworthy.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Robotics</h4>
+          <p>Applied research at the intersection of perception and control.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Patent Development</h4>
+          <p>Protecting and advancing novel AI methods and applications.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Scientific Publications</h4>
+          <p>Original research shared with the global AI community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section class="section" id="media">
+    <div class="container">
+      <p class="section-eyebrow reveal">Media</p>
+      <h2 class="section-title reveal">NAVPRIX Media Studios</h2>
+      <p class="section-lead reveal">We translate research into stories worth watching — documentaries, educational
+        series, and original media that make advanced science accessible to a global audience.</p>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Documentaries</h4>
+          <p>Long-form films exploring the frontier of applied AI research.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Educational Videos</h4>
+          <p>Short-form series that make complex science approachable.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>AI Movies</h4>
+          <p>Narrative productions exploring intelligence, ethics, and the future.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Podcasts</h4>
+          <p>Conversations with researchers, engineers, and industry builders.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Digital Media</h4>
+          <p>Social-first content translating research into public understanding.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Animation</h4>
+          <p>Motion design that visualizes complex systems and ideas.</p>
+        </div>
+      </div>
+
+      <div class="video-placeholder" style="margin-top: 40px;">
+        <button class="video-placeholder__play" aria-label="Play featured video">
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" fill="currentColor" />
+          </svg>
+        </button>
+        <span class="video-placeholder__label">Featured Research Documentary — youtube.com/@navprix <span
+            class="mock-tag">MOCK</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="section section--alt" id="publications">
+    <div class="container">
+      <p class="section-eyebrow reveal">Publications</p>
+      <h2 class="section-title reveal">Knowledge, published.</h2>
+      <p class="section-lead reveal">We treat knowledge as a product. Research becomes books, papers, and
+        documentation — built to outlast any single product cycle.</p>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Books</h4>
+          <p>Technical, academic, and children's books that make advanced ideas accessible.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Research Papers</h4>
+          <p>Original studies spanning artificial intelligence, healthcare, agriculture, and education.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Patents</h4>
+          <p>Patent-pending innovations developed inside our research labs.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Scientific Articles</h4>
+          <p>Peer-reviewed contributions to the global AI research community.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Knowledge Platform</h4>
+          <p>A growing library of documentation, whitepapers, and technical guides.</p>
+        </div>
+      </div>
+
+      <div class="pillars pillars--six" style="margin-top: 40px;">
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__head">
+            <h3>Foundations of Applied Intelligence</h3>
+            <em class="badge badge--live">Book</em>
+          </div>
+          <p>A technical survey of applied AI methods across healthcare, agriculture, and education. <span
+              class="mock-tag">MOCK</span></p>
+        </article>
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__head">
+            <h3>Explainable Systems</h3>
+            <em class="badge badge--beta">Research</em>
+          </div>
+          <p>Original research on interpretability and trust in enterprise AI deployment. <span
+              class="mock-tag">MOCK</span></p>
+        </article>
+        <article class="pillar-card reveal" data-tilt>
+          <div class="pillar-card__head">
+            <h3>Intelligence for Everyone</h3>
+            <em class="badge badge--soon">Children's Book</em>
+          </div>
+          <p>An illustrated introduction to artificial intelligence for young readers. <span
+              class="mock-tag">MOCK</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
       <p class="section-eyebrow reveal">Who We Are</p>
-      <h2 class="section-title reveal">A studio where engineering meets storytelling.</h2>
+      <h2 class="section-title reveal">An AI, research, and innovation company.</h2>
       <p class="section-lead reveal">
-        NAVPRIX is a multidisciplinary studio operating where engineering meets
-        storytelling. We design and build software, launch our own products,
-        advise founders and enterprises on technology strategy, and produce
-        original media — because the best ideas deserve both a strong
-        foundation and a great story.
-        <span class="mock-tag">MOCK</span>
+        NAVPRIX Global is an artificial intelligence, research, and innovation company. Our mission is to build
+        AI-powered products, conduct advanced research, deliver world-class technology services, create scientific
+        knowledge, and solve real-world problems using artificial intelligence. Our vision is to become one of the
+        world's leading AI, research, technology, publishing, and innovation companies.
       </p>
 
-      <div class="stats reveal">
+      <div class="stats stats--five reveal">
         <div class="stat">
-          <span class="stat__num" data-count="40">0</span><span class="stat__suffix">+</span>
-          <p>Projects Shipped</p>
+          <span class="stat__num" data-count="22">0</span><span class="stat__suffix">+</span>
+          <p>Years Experience</p>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="12">0</span>
-          <p>Industries Served</p>
+          <span class="stat__num" data-count="15">0</span><span class="stat__suffix">+</span>
+          <p>Books Published</p>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="5">0</span><span class="stat__suffix">+</span>
-          <p>Years in Motion</p>
+          <span class="stat__num" data-count="25">0</span><span class="stat__suffix">+</span>
+          <p>Research Publications</p>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="20">0</span><span class="stat__suffix">+</span>
-          <p>Happy Clients</p>
+          <span class="stat__num" data-count="10">0</span><span class="stat__suffix">+</span>
+          <p>AI Products</p>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+          <p>Innovation Driven</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROCESS -->
-  <section class="section" id="process">
+  <section class="section section--alt" id="process">
     <div class="container">
       <p class="section-eyebrow reveal">How We Work</p>
-      <h2 class="section-title reveal">From idea to impact.</h2>
+      <h2 class="section-title reveal">From research to real-world impact.</h2>
 
       <div class="timeline">
         <div class="timeline__line" aria-hidden="true"></div>
         <div class="timeline__step reveal">
           <span class="timeline__num">01</span>
-          <h3>Discover</h3>
-          <p>We start by understanding your goals, users, and constraints. <span class="mock-tag">MOCK</span></p>
+          <h3>Research</h3>
+          <p>We begin with rigorous inquiry — understanding the data, the science, and the constraints before
+            designing a solution. <span class="mock-tag">MOCK</span></p>
         </div>
         <div class="timeline__step reveal">
           <span class="timeline__num">02</span>
           <h3>Design</h3>
-          <p>We map the experience and architecture before writing a line of code. <span class="mock-tag">MOCK</span>
-          </p>
+          <p>We architect intelligent systems and experiences, grounded in both engineering discipline and the
+            scientific method. <span class="mock-tag">MOCK</span></p>
         </div>
         <div class="timeline__step reveal">
           <span class="timeline__num">03</span>
-          <h3>Build</h3>
-          <p>We ship in focused iterations, with visibility at every step. <span class="mock-tag">MOCK</span></p>
+          <h3>Build &amp; Validate</h3>
+          <p>We build in focused, tested iterations — validating every model and product against real-world
+            conditions. <span class="mock-tag">MOCK</span></p>
         </div>
         <div class="timeline__step reveal">
           <span class="timeline__num">04</span>
-          <h3>Launch &amp; Grow</h3>
-          <p>We support the release and keep improving based on real usage. <span class="mock-tag">MOCK</span></p>
+          <h3>Deploy &amp; Publish</h3>
+          <p>We ship, monitor, and often publish our findings — contributing back to the research community we
+            build for. <span class="mock-tag">MOCK</span></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED WORK -->
-  <section class="section section--alt" id="work">
+  <!-- SELECTED INITIATIVES -->
+  <section class="section" id="work">
     <div class="container">
-      <p class="section-eyebrow reveal">Featured Work</p>
-      <h2 class="section-title reveal">Selected projects &amp; stories.</h2>
+      <p class="section-eyebrow reveal">Selected Initiatives</p>
+      <h2 class="section-title reveal">Research and products in motion.</h2>
 
       <div class="work-grid">
-        <article class="work-card reveal">
+        <article class="work-card reveal" data-tilt>
           <div class="work-card__media work-card__media--1"></div>
-          <span class="tag">Software</span>
-          <h3>Aperture CRM</h3>
-          <p>A custom CRM rebuild that cut manual data entry by 60%. <span class="mock-tag">MOCK</span></p>
+          <span class="tag">AI</span>
+          <h3>Enterprise LLM Deployment</h3>
+          <p>A retrieval-augmented AI agent deployed across a large-scale enterprise support organization. <span
+              class="mock-tag">MOCK</span></p>
         </article>
-        <article class="work-card reveal">
+        <article class="work-card reveal" data-tilt>
           <div class="work-card__media work-card__media--2"></div>
-          <span class="tag">Product</span>
-          <h3>PulseBoard</h3>
-          <p>Our in-house analytics platform, built for speed. <span class="mock-tag">MOCK</span></p>
+          <span class="tag">Research</span>
+          <h3>Explainable AI for Healthcare</h3>
+          <p>Applied research on interpretable diagnostic models for clinical decision support. <span
+              class="mock-tag">MOCK</span></p>
         </article>
-        <article class="work-card reveal">
+        <article class="work-card reveal" data-tilt>
           <div class="work-card__media work-card__media--3"></div>
-          <span class="tag">Media</span>
-          <h3>The Build</h3>
-          <p>A behind-the-scenes documentary short of a startup's first year. <span class="mock-tag">MOCK</span></p>
+          <span class="tag">Products</span>
+          <h3>AI Piano Teacher</h3>
+          <p>Our adaptive AI music tutor — listening, correcting, and personalizing lessons in real time.</p>
         </article>
-        <article class="work-card reveal">
+        <article class="work-card reveal" data-tilt>
           <div class="work-card__media work-card__media--4"></div>
-          <span class="tag">Consulting</span>
-          <h3>Meridian Health — Tech Strategy</h3>
-          <p>Architecture roadmap for a healthtech platform's next 3 years. <span class="mock-tag">MOCK</span></p>
+          <span class="tag">Agriculture AI</span>
+          <h3>FarmAI Field Trials</h3>
+          <p>Computer vision models for early crop disease detection, piloted across organic farms. <span
+              class="mock-tag">MOCK</span></p>
         </article>
-        <article class="work-card reveal">
+        <article class="work-card reveal" data-tilt>
           <div class="work-card__media work-card__media--5"></div>
           <span class="tag">Media</span>
-          <h3>NAVPRIX YouTube — Ep. 12</h3>
-          <p>Inside our design process. <span class="mock-tag">MOCK</span></p>
+          <h3>The Intelligence Series</h3>
+          <p>A documentary series exploring the frontier of applied AI research. <span class="mock-tag">MOCK</span>
+          </p>
         </article>
-        <article class="work-card reveal">
+        <article class="work-card reveal" data-tilt>
           <div class="work-card__media work-card__media--6"></div>
-          <span class="tag">Software</span>
-          <h3>Northline Logistics App</h3>
-          <p>A driver-facing mobile app used by 500+ daily drivers. <span class="mock-tag">MOCK</span></p>
+          <span class="tag">Consulting</span>
+          <h3>Enterprise Cloud &amp; AI Modernization</h3>
+          <p>A cloud and AI transformation roadmap for a healthcare enterprise's next decade. <span
+              class="mock-tag">MOCK</span></p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- WHY NAVPRIX -->
-  <section class="section" id="why">
+  <!-- WHY NAVPRIX GLOBAL -->
+  <section class="section section--alt" id="why">
     <div class="container">
-      <p class="section-eyebrow reveal">Why NAVPRIX</p>
-      <h2 class="section-title reveal">Built different, on purpose.</h2>
+      <p class="section-eyebrow reveal">Why NAVPRIX Global</p>
+      <h2 class="section-title reveal">Built like a research lab. Run like a company.</h2>
 
       <div class="why-grid">
         <div class="why-item reveal">
-          <h3>Engineering meets storytelling</h3>
-          <p>We don't just ship code, we communicate the why. <span class="mock-tag">MOCK</span></p>
+          <h3>Research-grade rigor</h3>
+          <p>We validate our products with the same discipline as scientific research — not just shipped, but
+            proven. <span class="mock-tag">MOCK</span></p>
         </div>
         <div class="why-item reveal">
-          <h3>End-to-end</h3>
-          <p>From strategy to launch to growth, under one roof. <span class="mock-tag">MOCK</span></p>
+          <h3>Full-spectrum innovation</h3>
+          <p>From applied research to published books, we own the entire journey from idea to impact. <span
+              class="mock-tag">MOCK</span></p>
         </div>
         <div class="why-item reveal">
-          <h3>Small team, senior execution</h3>
-          <p>No bloated layers — direct access to the people doing the work. <span class="mock-tag">MOCK</span></p>
+          <h3>Small, elite team</h3>
+          <p>No bloated layers of management — direct access to the scientists and engineers doing the work. <span
+              class="mock-tag">MOCK</span></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section section--alt" id="testimonials">
+  <section class="section" id="testimonials">
     <div class="container">
       <p class="section-eyebrow reveal">Testimonials</p>
       <h2 class="section-title reveal">What partners say. <span class="mock-tag">MOCK</span></h2>
 
       <div class="testimonials">
-        <blockquote class="testimonial reveal">
-          <p>"NAVPRIX didn't just build what we asked for — they challenged our assumptions and the product is better
-            for it."</p>
-          <footer>Alex Rivera, Founder — Meridian Health</footer>
+        <blockquote class="testimonial reveal" data-tilt>
+          <p>"NAVPRIX didn't just deploy a model — they understood our data, our constraints, and our compliance
+            requirements before writing a line of code."</p>
+          <footer>Alex Rivera, VP Engineering — Enterprise Healthcare Partner</footer>
         </blockquote>
-        <blockquote class="testimonial reveal">
-          <p>"Their media team made our product launch feel like an event, not just an announcement."</p>
-          <footer>Priya Nathan, Head of Marketing — Northline Logistics</footer>
+        <blockquote class="testimonial reveal" data-tilt>
+          <p>"Their research team brought a level of rigor to our AI roadmap I hadn't seen outside academia."</p>
+          <footer>Priya Nathan, Head of Innovation — Northline Industries</footer>
         </blockquote>
-        <blockquote class="testimonial reveal">
-          <p>"Rare to find a partner who's equally sharp on architecture and on brand."</p>
-          <footer>Sam Okafor, CTO — Aperture</footer>
+        <blockquote class="testimonial reveal" data-tilt>
+          <p>"Rare to find a partner who's equally sharp on machine learning architecture and on communicating the
+            science."</p>
+          <footer>Sam Okafor, CTO — Aperture Systems</footer>
         </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- INNOVATION ECOSYSTEM -->
+  <section class="section section--alt" id="ecosystem">
+    <div class="container">
+      <p class="section-eyebrow reveal">Innovation Ecosystem</p>
+      <h2 class="section-title reveal">One company. Nine engines of impact.</h2>
+      <p class="section-lead reveal">Every division at NAVPRIX Global traces back to the same research foundation —
+        a single system connecting artificial intelligence to products, publications, and industries.</p>
+
+      <div class="ecosystem reveal">
+        <a href="#top" class="ecosystem__node ecosystem__node--root">
+          <img src="assets/mark.svg" alt="" width="20" height="20">
+          NAVPRIX LLC
+        </a>
+        <div class="ecosystem__connector"></div>
+        <a href="#solutions" class="ecosystem__node ecosystem__node--l1">Artificial Intelligence</a>
+        <div class="ecosystem__connector"></div>
+        <div class="ecosystem__level">
+          <a href="#research" class="ecosystem__node">Research Labs</a>
+          <a href="#products" class="ecosystem__node">Software Products</a>
+          <a href="#solutions" class="ecosystem__node">Consulting</a>
+        </div>
+        <div class="ecosystem__connector"></div>
+        <div class="ecosystem__level">
+          <a href="#media" class="ecosystem__node">Media Studios</a>
+          <a href="#publications" class="ecosystem__node">Publications</a>
+          <a href="#solutions" class="ecosystem__node">Academy</a>
+        </div>
+        <div class="ecosystem__connector"></div>
+        <div class="ecosystem__level">
+          <a href="#research" class="ecosystem__node">Agriculture AI</a>
+          <a href="#research" class="ecosystem__node">Healthcare AI</a>
+          <a href="#solutions" class="ecosystem__node">Education</a>
+        </div>
       </div>
     </div>
   </section>
@@ -312,7 +790,7 @@
   <section class="section contact" id="contact">
     <div class="container contact__inner">
       <p class="section-eyebrow reveal">Get In Touch</p>
-      <h2 class="section-title reveal">Have an idea? Let's build it. <span class="mock-tag">MOCK</span></h2>
+      <h2 class="section-title reveal">Have an idea? Let's build the future. <span class="mock-tag">MOCK</span></h2>
 
       <div class="contact__grid">
         <form class="contact-form reveal" id="contactForm">
@@ -321,12 +799,14 @@
             <label>Email<input type="email" name="email" required></label>
           </div>
           <label>Company<input type="text" name="company"></label>
-          <label>Project Type
+          <label>Area of Interest
             <select name="projectType">
-              <option>Software</option>
-              <option>Product</option>
-              <option>Consulting</option>
-              <option>Media</option>
+              <option>AI Solutions</option>
+              <option>Software Products</option>
+              <option>Research Collaboration</option>
+              <option>Technology Consulting</option>
+              <option>Media &amp; Publications</option>
+              <option>Education</option>
               <option>Other</option>
             </select>
           </label>
@@ -353,26 +833,76 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div style="display: flex; align-items: center; justify-content: space-between;">
-        <a href="#top" class="brand brand--footer">
-          <!-- <img src="assets/logo-mark.png" alt="" class="brand__mark"> -->
-          <img src="assets/logo2.png" alt="NAVPRIX" class="brand__word-img">
-        </a>
-        <div>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#top" class="brand brand--footer">
+            <img src="assets/logo-wordmark-new.png" alt="NAVPRIX" class="brand__word-img">
+            <span class="footer__global">GLOBAL</span>
+          </a>
           <p class="footer__tagline">Innovate · Intelligence · Impact</p>
-          <nav class="footer__links">
-            <a href="#services">Services</a>
-            <a href="#products">Products</a>
-            <a href="#media">Media</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+            <a href="#" aria-label="YouTube" class="social-icon">YT</a>
+            <a href="#" aria-label="Instagram" class="social-icon">IG</a>
+            <a href="#" aria-label="X" class="social-icon">X</a>
+          </div>
         </div>
+
+        <nav class="footer__cols">
+          <div class="footer__col">
+            <h4>Solutions</h4>
+            <a href="#solutions">AI Solutions</a>
+            <a href="#solutions">Technology Consulting</a>
+            <a href="#solutions">Education</a>
+          </div>
+          <div class="footer__col">
+            <h4>Products</h4>
+            <a href="#products">AI Piano Teacher</a>
+            <a href="#products">NEET Teacher</a>
+            <a href="#products">IntelXL WealthOS</a>
+            <a href="#products">FarmAI</a>
+          </div>
+          <div class="footer__col">
+            <h4>Research</h4>
+            <a href="#research">Research Labs</a>
+            <a href="#publications">Publications</a>
+            <a href="#publications">Patents</a>
+          </div>
+          <div class="footer__col">
+            <h4>Media</h4>
+            <a href="#media">Media Studios</a>
+            <a href="#solutions">Academy</a>
+            <a href="#work">Selected Initiatives</a>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Partners</a>
+            <a href="#">Investors</a>
+          </div>
+        </nav>
       </div>
-      <p class="footer__copy">© 2026 NAVPRIX. All rights reserved. <span class="mock-tag">MOCK</span></p>
+
+      <div class="footer__bottom">
+        <p class="footer__bottom-brand">NAV<span class="accent">PRIX</span> <span class="accent">GLOBAL</span></p>
+        <nav class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer__copy">© 2026 NAVPRIX Global LLC. All rights reserved. <span class="mock-tag">MOCK</span>
+        </p>
+      </div>
     </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>
