@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OncoSense AI | Healthcare AI Research | NAVPRIX Global</title>
+  <meta name="description"
+    content="OncoSense AI is NAVPRIX Global's Healthcare AI research platform focused on advancing early cancer detection through artificial intelligence, predictive analytics, medical imaging, and scientific innovation.">
+  <meta property="og:title" content="OncoSense AI | Healthcare AI Research | NAVPRIX Global">
+  <meta property="og:description"
+    content="A Healthcare AI research initiative exploring early cancer detection through multimodal medical data, medical imaging, pathology, biomarkers, and genomic intelligence.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OncoSense AI | Healthcare AI Research | NAVPRIX Global">
+  <meta name="twitter:description"
+    content="A Healthcare AI research initiative exploring early cancer detection through multimodal medical data and AI.">
+  <meta name="twitter:image" content="assets/og-image.jpg">
+  <meta name="theme-color" content="#050810">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html#top" class="brand">
+        <img src="assets/logo-wordmark-new.png" alt="NAVPRIX" class="brand__word-img">
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#solutions">Solutions</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#media">Media</a>
+        <a href="index.html#about">Company</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="btn btn--primary btn--sm nav-cta-mobile">Partner With Us</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn--primary btn--sm nav-cta">Partner With Us</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <a href="index.html#products" class="back-link reveal">← Back to Products</a>
+        <p class="eyebrow reveal">HEALTHCARE AI <span class="dot">·</span> RESEARCH INITIATIVE</p>
+        <h1 class="hero__title reveal" style="font-size: clamp(2.2rem, 4vw, 3.4rem);">OncoSense AI</h1>
+        <p class="hero__tagline reveal">Early Detection. Better Outcomes.</p>
+        <p class="hero__subtitle reveal">An AI-powered research platform focused on early cancer detection using
+          multimodal medical data — medical imaging, pathology, biomarkers, genomic intelligence, and predictive
+          analytics — built to support researchers, healthcare organizations, and future clinical innovation.</p>
+        <div class="hero__cta reveal">
+          <a href="#vision" class="btn btn--primary">
+            View Research Vision
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a href="index.html#contact" class="btn btn--ghost">Partner With Us</a>
+        </div>
+        <p class="hero__trust reveal">Status: <strong>Active Research</strong> <em class="badge badge--soon"
+            style="margin-left: 4px;">Research</em> — not a medical device, see <a href="#disclaimer"
+            style="color: var(--blue-2); text-decoration: underline;">disclaimer</a></p>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <canvas class="hero__globe" id="moleculeCanvas"></canvas>
+        <div class="hero__badge hero__badge--1">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="10" cy="10" r="6" />
+              <path d="m20 20-4.35-4.35" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div><strong>Early Detection</strong><span>Research Focus</span></div>
+        </div>
+        <div class="hero__badge hero__badge--2">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="8" />
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div><strong>Precision Medicine</strong><span>Long-Term Goal</span></div>
+        </div>
+        <div class="hero__badge hero__badge--3">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M9 3h6M10 3v6.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div><strong>Research-Driven</strong><span>Scientific Rigor</span></div>
+        </div>
+        <div class="hero__badge hero__badge--4">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z" stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <div><strong>Explainable AI</strong><span>Auditable Models</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="section section--alt" id="overview">
+    <div class="container">
+      <p class="section-eyebrow reveal">Overview</p>
+      <h2 class="section-title reveal">A research initiative in early cancer detection.</h2>
+      <p class="section-lead reveal">OncoSense AI is a long-term research initiative by NAVPRIX Global focused on advancing
+        early cancer detection through artificial intelligence. The platform explores how AI can assist researchers
+        by analyzing multimodal healthcare data — supporting future research into earlier detection, improved
+        clinical decision support, and precision medicine.</p>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Medical Imaging</h4>
+          <p>Radiology and imaging data explored for early-stage detection signals.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Pathology</h4>
+          <p>Digital pathology analysis to support research-grade tissue evaluation.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Clinical Data</h4>
+          <p>Structured clinical data integrated into a unified research view.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Biomarkers</h4>
+          <p>Biomarker patterns studied for early risk indicators.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Genomics</h4>
+          <p>Genomic intelligence explored alongside imaging and clinical data.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Predictive Analytics</h4>
+          <p>Statistical and AI models researching long-term risk trajectories.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Medical Knowledge Graphs</h4>
+          <p>Structured medical knowledge connecting data across research domains.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <p class="section-eyebrow reveal">Key Features</p>
+      <h2 class="section-title reveal">Built for rigorous, explainable research.</h2>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Medical Imaging AI</h4>
+          <p>Research models for analyzing radiology and imaging data.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Computer Vision</h4>
+          <p>Vision models applied to medical image research.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Pathology Analysis</h4>
+          <p>AI-assisted analysis of digital pathology slides.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Predictive Risk Modeling</h4>
+          <p>Models researching long-term risk and progression patterns.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Clinical Decision Support</h4>
+          <p>Research into how AI could support — not replace — clinical judgment.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Biomarker Intelligence</h4>
+          <p>Pattern analysis across biomarker and lab data.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Research Dashboard</h4>
+          <p>A unified workspace for reviewing multimodal research data.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>AI-Assisted Data Analysis</h4>
+          <p>Accelerating how researchers explore large medical datasets.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Medical Report Intelligence</h4>
+          <p>Structuring unstructured medical reports for research use.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Explainable AI</h4>
+          <p>Interpretable models designed to be auditable, not a black box.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH VISION -->
+  <section class="section section--alt" id="vision">
+    <div class="container">
+      <p class="section-eyebrow reveal">Research Vision</p>
+      <h2 class="section-title reveal">Why we're building OncoSense AI.</h2>
+
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <h3>Earlier signals, better outcomes</h3>
+          <p>We believe earlier detection is one of the highest-leverage opportunities in healthcare AI research.
+            <span class="mock-tag">MOCK</span></p>
+        </div>
+        <div class="why-item reveal">
+          <h3>Precision over generalization</h3>
+          <p>Multimodal data — imaging, pathology, genomics — lets research move beyond one-size-fits-all models.
+            <span class="mock-tag">MOCK</span></p>
+        </div>
+        <div class="why-item reveal">
+          <h3>Responsible, explainable AI</h3>
+          <p>Research-grade AI should be interpretable and auditable, not a black box. <span
+              class="mock-tag">MOCK</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY STACK -->
+  <section class="section" id="technology">
+    <div class="container">
+      <p class="section-eyebrow reveal">Technology Stack</p>
+      <h2 class="section-title reveal">The research stack behind OncoSense AI.</h2>
+      <p class="section-lead reveal">An illustrative view of the research architecture — it evolves as the work
+        progresses. <span class="mock-tag">MOCK</span></p>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Computer Vision Models</h4>
+          <p>Deep learning models researching imaging and pathology data.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Multimodal Data Fusion</h4>
+          <p>Combining imaging, genomic, and clinical signals into one research view.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Medical Knowledge Graphs</h4>
+          <p>Connecting structured medical knowledge across research domains.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Explainable AI Layer</h4>
+          <p>Interpretability tooling built into the research pipeline from day one.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Predictive Analytics Engine</h4>
+          <p>Statistical and machine learning models for risk-trajectory research.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Secure Research Infrastructure</h4>
+          <p>Infrastructure designed around research-grade data governance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH STATUS / ROADMAP -->
+  <section class="section section--alt" id="roadmap">
+    <div class="container">
+      <p class="section-eyebrow reveal">Research Status</p>
+      <h2 class="section-title reveal">From research to potential real-world impact.</h2>
+      <p class="section-lead reveal">OncoSense AI is presently in active research. Each stage ahead requires
+        rigorous validation before advancing to the next.</p>
+
+      <div class="timeline timeline--six">
+        <div class="timeline__line" aria-hidden="true"></div>
+        <div class="timeline__step timeline__step--current reveal">
+          <span class="timeline__num">01</span>
+          <h3>Research</h3>
+          <p>Actively exploring multimodal AI approaches to early cancer detection.</p>
+          <span class="timeline__tag">Current Stage</span>
+        </div>
+        <div class="timeline__step timeline__step--muted reveal">
+          <span class="timeline__num">02</span>
+          <h3>Prototype</h3>
+          <p>Early-stage prototypes for internal research evaluation.</p>
+        </div>
+        <div class="timeline__step timeline__step--muted reveal">
+          <span class="timeline__num">03</span>
+          <h3>Validation</h3>
+          <p>Rigorous testing against research benchmarks and datasets.</p>
+        </div>
+        <div class="timeline__step timeline__step--muted reveal">
+          <span class="timeline__num">04</span>
+          <h3>Clinical Collaboration</h3>
+          <p>Potential collaboration with clinical and academic research partners.</p>
+        </div>
+        <div class="timeline__step timeline__step--muted reveal">
+          <span class="timeline__num">05</span>
+          <h3>Regulatory Review</h3>
+          <p>Any clinical pathway would require formal regulatory review.</p>
+        </div>
+        <div class="timeline__step timeline__step--muted reveal">
+          <span class="timeline__num">06</span>
+          <h3>Future Deployment</h3>
+          <p>Real-world application only after full validation and approval.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POTENTIAL APPLICATIONS -->
+  <section class="section" id="applications">
+    <div class="container">
+      <p class="section-eyebrow reveal">Potential Applications</p>
+      <h2 class="section-title reveal">Who this research could ultimately serve.</h2>
+      <p class="section-lead reveal">Potential future applications, contingent on successful research validation
+        and regulatory approval — not current deployments.</p>
+
+      <div class="chip-grid">
+        <div class="chip-card reveal">
+          <h4>Research Institutions</h4>
+          <p>Academic and independent groups researching early detection methods.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Healthcare Organizations</h4>
+          <p>Organizations exploring AI-assisted research collaboration.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Academic Medical Centers</h4>
+          <p>Centers advancing translational cancer research.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Pharmaceutical Research</h4>
+          <p>Supporting research into biomarkers and therapeutic pathways.</p>
+        </div>
+        <div class="chip-card reveal">
+          <h4>Clinical Research Networks</h4>
+          <p>Multi-site research collaboration on early detection studies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH DISCLAIMER -->
+  <section class="section section--alt" id="disclaimer">
+    <div class="container">
+      <p class="section-eyebrow reveal" style="text-align: center;">Important</p>
+      <div class="disclaimer-panel reveal">
+        <div class="disclaimer-panel__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 8h.01M11 11.5h1v5h1" />
+          </svg>
+        </div>
+        <div>
+          <h2>Research Disclaimer</h2>
+          <p>This platform is currently a research initiative. It is not a medical device and is not intended to
+            diagnose, treat, cure, or prevent disease. Any future clinical implementation would require appropriate
+            validation, regulatory review, and approval.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section contact" id="get-involved">
+    <div class="container" style="text-align: center;">
+      <p class="section-eyebrow reveal">Get Involved</p>
+      <h2 class="section-title reveal" style="margin-left: auto; margin-right: auto;">Partner with our Healthcare AI
+        research team.</h2>
+      <p class="section-lead reveal" style="margin-left: auto; margin-right: auto;">Interested in research
+        collaboration, clinical partnership, or learning more about OncoSense AI? We'd love to hear from you.</p>
+      <div class="hero__cta reveal" style="justify-content: center;">
+        <a href="index.html#contact" class="btn btn--primary">Partner With Us</a>
+        <a href="index.html#research" class="btn btn--ghost">Explore Research Labs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html#top" class="brand brand--footer">
+            <img src="assets/logo-wordmark-new.png" alt="NAVPRIX" class="brand__word-img">
+            <span class="footer__global">GLOBAL</span>
+          </a>
+          <p class="footer__tagline">Innovate · Intelligence · Impact</p>
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+            <a href="#" aria-label="YouTube" class="social-icon">YT</a>
+            <a href="#" aria-label="Instagram" class="social-icon">IG</a>
+            <a href="#" aria-label="X" class="social-icon">X</a>
+          </div>
+        </div>
+
+        <nav class="footer__cols">
+          <div class="footer__col">
+            <h4>Solutions</h4>
+            <a href="index.html#solutions">AI Solutions</a>
+            <a href="index.html#solutions">Technology Consulting</a>
+            <a href="index.html#solutions">Education</a>
+          </div>
+          <div class="footer__col">
+            <h4>Products</h4>
+            <a href="index.html#products">AI Piano Teacher</a>
+            <a href="index.html#products">NEET Teacher</a>
+            <a href="index.html#products">IntelXL WealthOS</a>
+            <a href="index.html#products">FarmAI</a>
+            <a href="oncosense-ai.html">OncoSense AI</a>
+          </div>
+          <div class="footer__col">
+            <h4>Research</h4>
+            <a href="index.html#research">Research Labs</a>
+            <a href="index.html#publications">Publications</a>
+            <a href="index.html#publications">Patents</a>
+          </div>
+          <div class="footer__col">
+            <h4>Media</h4>
+            <a href="index.html#media">Media Studios</a>
+            <a href="index.html#solutions">Academy</a>
+            <a href="index.html#work">Selected Initiatives</a>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <a href="index.html#about">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Partners</a>
+            <a href="#">Investors</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__bottom-brand">NAV<span class="accent">PRIX</span> <span class="accent">GLOBAL</span></p>
+        <nav class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <p class="footer__copy">© 2026 NAVPRIX Global LLC. All rights reserved. <span class="mock-tag">MOCK</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

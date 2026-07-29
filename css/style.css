@@ -12,11 +12,13 @@
   --silver-3: #8a97a6;
   --silver-4: #c7d0da;
   --silver-glow: rgba(199, 208, 218, 0.35);
+  --purple-1: #7c5cff;
+  --teal-1: #2dd4bf;
   --text: #eef2f7;
   --text-dim: #a7b0bd;
   --text-faint: #6b7484;
   --radius: 16px;
-  --max-width: 1180px;
+  --max-width: 1320px;
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -336,10 +338,10 @@ html { scrollbar-color: var(--blue-2) transparent; }
 /* ============ Hero ============ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: clamp(600px, 88vh, 820px);
   display: flex;
   align-items: center;
-  padding-top: 90px;
+  padding-top: 80px;
   overflow: hidden;
 }
 .hero__canvas {
@@ -366,8 +368,9 @@ html { scrollbar-color: var(--blue-2) transparent; }
 .hero__inner {
   position: relative;
   z-index: 1;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
   gap: 40px;
 }
@@ -419,12 +422,31 @@ html { scrollbar-color: var(--blue-2) transparent; }
   0% { background-position: 0% 50%; }
   100% { background-position: 250% 50%; }
 }
+.hero__tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 600;
+  color: var(--blue-2);
+  margin: 0 0 18px;
+}
 .hero__subtitle {
   font-size: 1.15rem;
   color: var(--text-dim);
   max-width: 560px;
   margin: 0 0 40px;
 }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+.back-link:hover { color: var(--blue-2); gap: 10px; }
 .hero__cta {
   display: flex;
   justify-content: flex-start;
@@ -447,7 +469,7 @@ html { scrollbar-color: var(--blue-2) transparent; }
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  max-width: 520px;
+  max-width: 620px;
   margin: 0 auto;
 }
 .hero__globe { width: 100%; height: 100%; display: block; }
@@ -635,12 +657,21 @@ html { scrollbar-color: var(--blue-2) transparent; }
 }
 .chip-card {
   position: relative;
+  display: block;
   overflow: hidden;
   padding: 22px;
   border-radius: 12px;
   background: var(--panel);
   border: 1px solid var(--panel-border);
   transition: border-color 0.3s ease, transform 0.3s var(--ease-out), box-shadow 0.3s ease;
+}
+.chip-card__link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--blue-2);
 }
 .chip-card:hover {
   border-color: rgba(79, 195, 247, 0.4);
@@ -772,6 +803,24 @@ html { scrollbar-color: var(--blue-2) transparent; }
   transition: gap 0.25s ease, color 0.25s ease;
 }
 .pillar-card__cta:hover { gap: 11px; color: var(--silver-2); }
+
+/* Healthcare AI accent — subtle purple/teal tint for the OncoSense AI card,
+   layered on top of the shared pillar-card look rather than replacing it. */
+.pillar-card--healthcare:hover {
+  border-color: rgba(124, 92, 255, 0.45);
+  box-shadow: 0 20px 50px -24px rgba(124, 92, 255, 0.4);
+}
+.pillar-card--healthcare .pillar-card__icon {
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.16), rgba(45, 212, 191, 0.14));
+}
+.pillar-card--healthcare:hover .pillar-card__icon {
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.26), rgba(45, 212, 191, 0.22));
+}
+.pillar-card--healthcare[data-tilt]::before {
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(124, 92, 255, 0.18), transparent 65%);
+}
+.pillar-card--healthcare .pillar-card__cta { color: var(--teal-1); }
+.pillar-card--healthcare .pillar-card__cta:hover { color: var(--silver-2); }
 
 .capability-list {
   display: flex;
@@ -910,6 +959,62 @@ html { scrollbar-color: var(--blue-2) transparent; }
 }
 .timeline__step h3 { font-family: var(--font-display); margin: 0 0 8px; font-size: 1.1rem; }
 .timeline__step p { color: var(--text-dim); font-size: 0.9rem; margin: 0; }
+
+.timeline--six { grid-template-columns: repeat(6, 1fr); }
+.timeline__step--current .timeline__num {
+  background: var(--blue-2);
+  color: #04101f;
+  box-shadow: 0 0 0 6px rgba(79, 195, 247, 0.18), 0 0 18px 2px rgba(79, 195, 247, 0.5);
+  animation: blip 2.4s ease-in-out infinite;
+}
+.timeline__step--current h3 { color: var(--blue-2); }
+.timeline__step--muted { opacity: 0.55; }
+.timeline__tag {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-2);
+}
+
+/* ============ Research disclaimer panel ============ */
+.disclaimer-panel {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  border: 1px solid rgba(79, 195, 247, 0.25);
+}
+.disclaimer-panel__icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(79, 195, 247, 0.12);
+  color: var(--blue-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.disclaimer-panel__icon svg { width: 22px; height: 22px; }
+.disclaimer-panel h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  color: var(--text);
+}
+.disclaimer-panel p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
 
 /* ============ Work Grid ============ */
 .work-grid {
@@ -1286,6 +1391,7 @@ html { scrollbar-color: var(--blue-2) transparent; }
   .hero__badge { display: none; }
   .pillars, .work-grid, .why-grid, .testimonials { grid-template-columns: repeat(2, 1fr); }
   .timeline { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+  .timeline--six { grid-template-columns: repeat(3, 1fr); }
   .timeline__line { display: none; }
   .contact__grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
@@ -1309,6 +1415,8 @@ html { scrollbar-color: var(--blue-2) transparent; }
   .navbar.menu-open .nav-cta-mobile { display: inline-flex; margin-top: 6px; }
   .pillars, .work-grid, .why-grid, .testimonials { grid-template-columns: 1fr; }
   .timeline { grid-template-columns: 1fr; }
+  .timeline--six { grid-template-columns: repeat(2, 1fr); }
+  .disclaimer-panel { flex-direction: column; padding: 24px; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .form-row { grid-template-columns: 1fr; }
   .section { padding: 80px 0; }

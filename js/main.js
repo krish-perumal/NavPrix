@@ -102,14 +102,16 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counters.forEach(el => counterObserver.observe(el));
 
-// ===== Contact form (demo — no backend wired up) =====
+// ===== Contact form (demo — no backend wired up; not every page has one) =====
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  status.textContent = "Thanks — this is a demo form, no message was actually sent yet.";
-  form.reset();
-});
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.textContent = "Thanks — this is a demo form, no message was actually sent yet.";
+    form.reset();
+  });
+}
 
 // ===== Video placeholder play button (demo) =====
 document.querySelector('.video-placeholder__play')?.addEventListener('click', () => {
@@ -263,19 +265,27 @@ if (heroCanvas && !prefersReducedMotion) {
   });
 }
 
-// ===== Hero network globe (rotating point-sphere + flight-path arcs) =====
-const heroGlobe = document.getElementById('heroGlobe');
-if (heroGlobe) {
-  const ctx = heroGlobe.getContext('2d');
-  const visual = heroGlobe.closest('.hero__visual');
+// ===== Network globe (rotating point-sphere + flight-path arcs) — reused
+// for the homepage's blue/silver AI globe and, with a retinted palette and
+// fewer/denser points, for a "molecular network" visual on product pages. =====
+function initNetworkGlobe(canvas, opts = {}) {
+  if (!canvas) return;
+  const pointCount = opts.pointCount || 180;
+  const arcCount = opts.arcCount || 7;
+  const frontColor = opts.frontColor || '79, 195, 247';
+  const backColor = opts.backColor || '199, 208, 218';
+  const ringColor = opts.ringColor || '79, 195, 247';
+
+  const ctx = canvas.getContext('2d');
+  const visual = canvas.closest('.hero__visual');
   let width, height, radius, cx, cy, rafId, running = false;
   let angle = 0;
 
   function resize() {
-    width = heroGlobe.clientWidth;
-    height = heroGlobe.clientHeight;
-    heroGlobe.width = width * devicePixelRatio;
-    heroGlobe.height = height * devicePixelRatio;
+    width = canvas.clientWidth;
+    height = canvas.clientHeight;
+    canvas.width = width * devicePixelRatio;
+    canvas.height = height * devicePixelRatio;
     ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
     cx = width / 2;
     cy = height / 2;
@@ -283,19 +293,18 @@ if (heroGlobe) {
   }
 
   // Evenly distributed points on a unit sphere (golden-angle / Fibonacci lattice).
-  const POINT_COUNT = 180;
   const points = [];
   const goldenAngle = Math.PI * (3 - Math.sqrt(5));
-  for (let i = 0; i < POINT_COUNT; i++) {
-    const y = 1 - (i / (POINT_COUNT - 1)) * 2;
+  for (let i = 0; i < pointCount; i++) {
+    const y = 1 - (i / (pointCount - 1)) * 2;
     const r = Math.sqrt(1 - y * y);
     const theta = goldenAngle * i;
     points.push({ x: Math.cos(theta) * r, y, z: Math.sin(theta) * r });
   }
-  // Fixed set of "flight path" arcs between a handful of points.
-  const arcs = Array.from({ length: 7 }, () => ({
-    a: Math.floor(Math.random() * POINT_COUNT),
-    b: Math.floor(Math.random() * POINT_COUNT),
+  // Fixed set of "flight path" / "bond" arcs between a handful of points.
+  const arcs = Array.from({ length: arcCount }, () => ({
+    a: Math.floor(Math.random() * pointCount),
+    b: Math.floor(Math.random() * pointCount),
   }));
 
   function project(p, rot) {
@@ -312,7 +321,7 @@ if (heroGlobe) {
     // outer orbit ring
     ctx.beginPath();
     ctx.arc(cx, cy, radius + 6, 0, Math.PI * 2);
-    ctx.strokeStyle = 'rgba(79, 195, 247, 0.15)';
+    ctx.strokeStyle = `rgba(${ringColor}, 0.15)`;
     ctx.lineWidth = 1;
     ctx.stroke();
 
@@ -327,7 +336,7 @@ if (heroGlobe) {
       ctx.beginPath();
       ctx.moveTo(pa.sx, pa.sy);
       ctx.quadraticCurveTo(mx, my, pb.sx, pb.sy);
-      ctx.strokeStyle = `rgba(79, 195, 247, ${0.25 * depth})`;
+      ctx.strokeStyle = `rgba(${frontColor}, ${0.25 * depth})`;
       ctx.lineWidth = 1;
       ctx.stroke();
     });
@@ -337,8 +346,8 @@ if (heroGlobe) {
       ctx.beginPath();
       ctx.arc(sx, sy, size, 0, Math.PI * 2);
       ctx.fillStyle = depth > 0.55
-        ? `rgba(79, 195, 247, ${0.35 + depth * 0.5})`
-        : `rgba(199, 208, 218, ${0.12 + depth * 0.3})`;
+        ? `rgba(${frontColor}, ${0.35 + depth * 0.5})`
+        : `rgba(${backColor}, ${0.12 + depth * 0.3})`;
       ctx.fill();
     });
   }
@@ -378,6 +387,15 @@ if (heroGlobe) {
     }, 200);
   });
 }
+
+initNetworkGlobe(document.getElementById('heroGlobe'));
+initNetworkGlobe(document.getElementById('moleculeCanvas'), {
+  pointCount: 90,
+  arcCount: 10,
+  frontColor: '124, 92, 255',
+  backColor: '45, 212, 191',
+  ringColor: '124, 92, 255',
+});
 
 // ===== Back to top =====
 const backToTop = document.getElementById('backToTop');
